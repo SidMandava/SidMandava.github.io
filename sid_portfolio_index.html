@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sid Mandava — Portfolio</title>
+    <meta name="description" content="Projects and work by Sid Mandava: EVs, robotics, embedded systems, and mechanical design." />
+
+    <!-- Tailwind (CDN for simplicity) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              calBlue: '#003262',
+              calGold: '#FDB515',
+            }
+          }
+        },
+        darkMode: 'class'
+      }
+    </script>
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23003262'/><text x='50' y='60' font-size='60' text-anchor='middle' fill='white'>S</text></svg>">
+
+    <style>
+      /* Smooth scroll */
+      html { scroll-behavior: smooth; }
+      /* Card hover */
+      .card:hover { transform: translateY(-2px); }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <!-- Header / Nav -->
+    <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-950/60">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#home" class="font-semibold tracking-tight flex items-center gap-2">
+          <span class="inline-block w-2.5 h-6 bg-calGold"></span>
+          <span>Sid Mandava</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm">
+          <a class="hover:opacity-80" href="#projects">Projects</a>
+          <a class="hover:opacity-80" href="#about">About</a>
+          <a class="hover:opacity-80" href="#contact">Contact</a>
+          <button id="themeToggle" class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800">Toggle theme</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="max-w-5xl mx-auto px-4 pt-10 pb-6">
+      <h1 class="text-3xl sm:text-5xl font-bold leading-tight">
+        Building electric vehicles, robots, and helpful tools —
+        <span class="text-calBlue dark:text-calGold">hands-on, end‑to‑end.</span>
+      </h1>
+      <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">
+        I’m a Mechanical Engineering student at UC Berkeley who designs and builds systems across 
+        hardware, controls, and software. Below is a curated set of projects. This site is simple on purpose so I can keep adding to it.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <a href="#projects" class="inline-flex items-center gap-2 rounded-lg bg-calBlue text-white px-4 py-2 hover:opacity-90">See projects</a>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="max-w-5xl mx-auto px-4 py-8">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl font-semibold">Projects</h2>
+        <a href="#all-projects" class="text-sm underline decoration-dotted">Jump to list</a>
+      </div>
+
+      <!-- IMAGE CARD GRID: click opens detailed section below (via #hash) -->
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <!-- SURGE card -->
+        <a href="#surge" class="group relative rounded-2xl overflow-hidden border card shadow-sm transition">
+          <img src="./images/surge-cbr600rr.jpg" alt="SURGE electric CBR600RR conversion" class="aspect-video w-full object-cover bg-slate-200 dark:bg-slate-800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 p-4 text-white">
+            <div class="text-xs uppercase tracking-wide opacity-80">2025 – Present</div>
+            <h3 class="text-lg font-semibold">SURGE — CBR600RR Electric Conversion</h3>
+            <p class="text-sm opacity-90">~25 kW target · custom Li‑ion pack · subframe + powertrain integration</p>
+          </div>
+        </a>
+
+        <!-- Festival of Lights card -->
+        <a href="#fol" class="group relative rounded-2xl overflow-hidden border card shadow-sm transition">
+          <img src="./images/festival-of-lights.jpg" alt="Festival of Lights float engineering" class="aspect-video w-full object-cover bg-slate-200 dark:bg-slate-800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 p-4 text-white">
+            <div class="text-xs uppercase tracking-wide opacity-80">2021 – 2023</div>
+            <h3 class="text-lg font-semibold">Festival of Lights — Float Engineering</h3>
+            <p class="text-sm opacity-90">Raspberry Pi control · battery power systems · stepper‑motor carousel</p>
+          </div>
+        </a>
+
+        <!-- FSAE card -->
+        <a href="#fsae" class="group relative rounded-2xl overflow-hidden border card shadow-sm transition">
+          <img src="./images/berkeley-formula-racing.jpg" alt="Berkeley Formula Racing" class="aspect-video w-full object-cover bg-slate-200 dark:bg-slate-800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 p-4 text-white">
+            <div class="text-xs uppercase tracking-wide opacity-80">2023 – 2024</div>
+            <h3 class="text-lg font-semibold">Berkeley Formula Racing — BDI</h3>
+            <p class="text-sm opacity-90">Brake force modeling · composites · chassis tabs</p>
+          </div>
+        </a>
+
+        <!-- Exoskeleton card -->
+        <a href="#exo" class="group relative rounded-2xl overflow-hidden border card shadow-sm transition">
+          <img src="./images/exoskeleton.jpg" alt="Lower-limb exoskeleton research" class="aspect-video w-full object-cover bg-slate-200 dark:bg-slate-800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 p-4 text-white">
+            <div class="text-xs uppercase tracking-wide opacity-80">2022</div>
+            <h3 class="text-lg font-semibold">Lower Limb Exoskeleton — SJSU</h3>
+            <p class="text-sm opacity-90">Hip subassembly CAD · 3D printing · ESP32 (CAN/I²C)</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- All projects simple list (easy to extend) -->
+      <div id="all-projects" class="mt-10">
+        <h3 class="text-xl font-semibold mb-3">All projects</h3>
+        <ul class="grid sm:grid-cols-2 gap-3 text-slate-700 dark:text-slate-200">
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#surge">SURGE — CBR600RR Electric Conversion (2025–Present)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#fol">Festival of Lights — Float Engineering (2021–2023)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#fsae">Berkeley Formula Racing — Brakes & Driver Interface (2023–2024)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#exo">Lower Limb Exoskeleton — SJSU (2022)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#rover">Autonomous Rover — ArduPilot (2021)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#uav">Autonomous Hexacopter — UAV Design & Testing (2023)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#gti">MK6 GTI Rear Strut Brace — Chassis Reinforcement (2025 – In Progress)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#sleep">Sleep Breath Tracker — Arduino Airflow Monitor (2022)</a></li>
+          <li class="rounded-xl border p-4"><a class="hover:underline" href="#esk8">Electric Skateboards — DIY EVs (2017–2019)</a></li>
+        </ul>
+        <p class="mt-3 text-sm text-slate-500">Click any project to open its detailed page section.</p>
+      </div>
+    </section>
+
+    <!-- "Detail pages" rendered inline with anchors (no JS). Only the targeted one is shown. -->
+    <section class="max-w-5xl mx-auto px-4 pb-6 space-y-8">
+      <!-- Reusable styles -->
+      <style>
+        .detail { display: none; }
+        .detail:target { display: block; }
+      </style>
+
+      <!-- SURGE detail -->
+      <article id="surge" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">SURGE — CBR600RR Electric Conversion</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/surge-cbr600rr.jpg" alt="SURGE electric CBR600RR build" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">First step toward a competitive electric superbike platform. Targeting ~25 kW peak from a custom lithium‑ion pack and integrated powertrain.</p>
+        <div class="mt-4 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-medium">What I did</h4>
+            <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700 dark:text-slate-200">
+              <li>Subframe to replace ICE drivetrain with EV components; waterjet prototypes.</li>
+              <li>Battery pack design (initial 26s4p P42A, ~1.6 kWh); busbar sizing & BMS research.</li>
+              <li>Motor/controller evaluation, cooling & packaging trade‑offs.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium">Skills</h4>
+            <div class="mt-2 flex flex-wrap gap-2 text-sm">
+              <span class="tag">SolidWorks</span><span class="tag">Battery pack design</span><span class="tag">Systems integration</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Festival of Lights detail -->
+      <article id="fol" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Festival of Lights — Float Engineering</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/festival-of-lights.jpg" alt="Festival of Lights float" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Modernized legacy floats with a Raspberry Pi–based animation/control system and battery power, including a stepper‑motor carousel.</p>
+        <ul class="mt-3 list-disc list-inside space-y-1 text-slate-700 dark:text-slate-200">
+          <li>Co‑developed reusable control power architecture adopted across floats.</li>
+          <li>Battery systems replaced gas generators; reduced noise/emissions.</li>
+          <li>Hands‑on chassis and mechanism work.</li>
+        </ul>
+      </article>
+
+      <!-- FSAE detail -->
+      <article id="fsae" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Berkeley Formula Racing — Brakes & Driver Interface</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/berkeley-formula-racing.jpg" alt="Berkeley Formula Racing car" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Worked on MATLAB-based brake modeling, carbon‑fiber seat mold, and chassis tabs; exposure to large multi‑subsystem team workflows.</p>
+      </article>
+
+      <!-- Exoskeleton detail -->
+      <article id="exo" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Lower Limb Exoskeleton — SJSU</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/exoskeleton.jpg" alt="Exoskeleton research" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Supported hip-subassembly CAD/prototyping; programmed ESP32 for motor/sensor comms (I²C/CAN); evaluated 3D printing methods.</p>
+      </article>
+
+      <!-- Rover detail -->
+      <article id="rover" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Autonomous Rover — ArduPilot</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/rover.jpg" alt="Autonomous rover" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Converted RC car to GPS‑guided ground vehicle; wiring, power distribution, sensor calibration, and waypoint tuning.</p>
+      </article>
+
+      <!-- UAV detail -->
+      <article id="uav" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Autonomous Hexacopter — UAV Design & Testing</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/uav.jpg" alt="Autonomous hexacopter" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Custom laser‑cut frame (iterated after early failure), reused rover electronics, tuned ArduPilot flight modes.</p>
+      </article>
+
+      <!-- GTI detail -->
+      <article id="gti" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/gti-brace.jpg" alt="MK6 GTI rear strut brace" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Custom brace tying rear pillars; measured geometry, laser‑cut prototype, final waterjet fabrication.</p>
+      </article>
+
+      <!-- Sleep tracker detail -->
+      <article id="sleep" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Sleep Breath Tracker — Arduino Airflow Monitor</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/sleep-tracker.jpg" alt="Sleep breath tracker device" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Pressure‑sensor airflow monitor with data logging; migrated from breadboard to custom Eagle PCB.</p>
+      </article>
+
+      <!-- Electric skateboards detail -->
+      <article id="esk8" class="detail rounded-2xl border p-6">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-2xl font-semibold">Electric Skateboards — DIY EVs</h3>
+          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+        </div>
+        <img src="./images/electric-skateboard.jpg" alt="DIY electric skateboard" class="mt-4 rounded-xl w-full aspect-video object-cover bg-slate-200 dark:bg-slate-800" />
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Hub‑motor and belt‑drive builds; hands‑on intro to batteries, controllers (VESC), and packaging.</p>
+      </article>
+    </section>
+
+    <!-- About -->
+
+    <section id="about" class="max-w-5xl mx-auto px-4 py-10">
+      <h2 class="text-2xl sm:text-3xl font-semibold">About</h2>
+      <p class="mt-3 text-slate-700 dark:text-slate-200 max-w-3xl">
+        I’m a junior at UC Berkeley (Mechanical Engineering) who learns by building. My work spans EV design (battery packs, drivetrains, cooling), embedded systems (ESP32, Raspberry Pi, ArduPilot), and practical fabrication (waterjet, 3D printing, composites). I like turning rough ideas into working machines and documenting what I learn so the next build is better.
+      </p>
+      <div class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+        <span class="font-medium">Core tools:</span> SolidWorks, Onshape, MATLAB, Arduino/ESP32, ArduPilot, Autodesk Eagle, waterjet, laser cutting, 3D printing.
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 pb-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold">Contact</h2>
+      <div class="mt-4 grid sm:grid-cols-2 gap-4">
+        <div class="rounded-2xl border p-5">
+          <div class="text-sm text-slate-500">Email</div>
+          <a class="text-lg font-medium text-calBlue dark:text-calGold hover:underline" href="mailto:sidm@berkeley.edu">sidm@berkeley.edu</a>
+        </div>
+        <div class="rounded-2xl border p-5">
+          <div class="text-sm text-slate-500">LinkedIn</div>
+          <a class="text-lg font-medium text-calBlue dark:text-calGold hover:underline" href="https://www.linkedin.com/in/sid-mandava-102828279/" target="_blank" rel="noreferrer">linkedin.com/in/sid-mandava-102828279/</a>
+        </div>
+      </div>
+      <p class="mt-6 text-slate-500 text-sm">Los Altos, CA · Berkeley, CA · (650) 669‑7623</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t">
+      <div class="max-w-5xl mx-auto px-4 py-6 text-sm flex items-center justify-between">
+        <span>© <span id="year"></span> Sid Mandava</span>
+        <a class="hover:underline" href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear()
+      // Theme toggle (persist in localStorage)
+      const root = document.documentElement
+      const btn = document.getElementById('themeToggle')
+      const saved = localStorage.getItem('theme')
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.classList.add('dark')
+      }
+      btn?.addEventListener('click', () => {
+        root.classList.toggle('dark')
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light')
+      })
+
+      // Small helper: apply consistent tag styling
+      document.querySelectorAll('.tag').forEach(el => {
+        el.classList.add('px-2','py-1','rounded-full','text-xs','bg-slate-100','dark:bg-slate-800')
+      })
+    </script>
+  </body>
+</html>
