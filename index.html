@@ -124,7 +124,7 @@
         <!-- 5. Rover -->
         <a href="#rover" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="Autonomous rover"
+            <img src="./images/rover/rover1.jpg" alt="Autonomous rover"
                  class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
@@ -152,7 +152,7 @@
         <!-- 7. GTI -->
         <a href="#gti" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="MK6 GTI rear strut brace"
+            <img src="./images/gti/gti1.jpg" alt="MK6 GTI rear strut brace"
                  class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
@@ -166,7 +166,7 @@
         <!-- 8. Sleep -->
         <a href="#sleep" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="Sleep breath tracker device"
+            <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker device"
                  class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
@@ -180,7 +180,7 @@
         <!-- 9. ESK8 -->
         <a href="#esk8" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="Electric skateboards"
+            <img src="./images/esk8/esk81.jpg" alt="Electric skateboards"
                  class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
@@ -476,14 +476,43 @@
           <h3 class="text-2xl font-semibold">Autonomous Rover – Waypoint Navigation With Ardupilot</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
-        <img src="./images/placeholder.jpg" alt="Autonomous rover" class="mt-4 rounded-xl w-full h-auto" />
+
+        <!-- TOP: rover2 + rover3 (ok to crop, white background) -->
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <img src="./images/rover/rover2.jpg" alt="Autonomous rover - image 2"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/rover/rover3.jpg" alt="Autonomous rover - image 3"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+        </div>
+
         <p class="mt-4 text-slate-700">2021</p>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">A GPS-guided autonomous rover built by converting a standard RC car into a ground vehicle running ArduPilot. The system used a flight controller, GPS module, and power management circuitry to achieve waypoint-based navigation similar to drones.</p>
+        <p class="mt-2 text-slate-700">
+          A GPS-guided autonomous rover built by converting a standard RC car into a ground vehicle running ArduPilot.
+          The system used a flight controller, GPS module, and power management circuitry to achieve waypoint-based
+          navigation similar to drones.
+        </p>
 
         <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">I started with a basic RC chassis and systematically replaced the control hardware with an ArduPilot-compatible board. I added a GPS module, soldered in a power distribution module (APC), and configured the firmware for ground vehicle dynamics. The project required wiring, soldering, and sensor calibration to integrate all components, followed by tuning and testing ArduPilot’s navigation stack for stable waypoint following.</p>
+        <p class="mt-2 text-slate-700">
+          I started with a basic RC chassis and systematically replaced the control hardware with an ArduPilot-compatible board.
+          I added a GPS module, soldered in a power distribution module (APC), and configured the firmware for ground vehicle
+          dynamics. The project required wiring, soldering, and sensor calibration to integrate all components, followed by
+          tuning and testing ArduPilot’s navigation stack for stable waypoint following.
+        </p>
+
+        <!-- UNDER PROCESS: rover4 + rover5 (no clipping, full image shown) -->
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
+            <img src="./images/rover/rover4.jpg" alt="Autonomous rover - image 4"
+                class="max-h-full max-w-full object-contain rounded-xl" />
+          </div>
+          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
+            <img src="./images/rover/rover5.jpg" alt="Autonomous rover - image 5"
+                class="max-h-full max-w-full object-contain rounded-xl" />
+          </div>
+        </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
@@ -492,14 +521,15 @@
           <li>Performed soldering, sensor calibration, and firmware setup for waypoint navigation.</li>
         </ul>
 
-        <h4 class="mt-4 font-medium">Skills & Tools</h4>
+        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Embedded Systems & Control: ArduPilot setup, ground vehicle tuning, waypoint navigation</li>
-          <li>Electronics & Wiring: Power distribution design, soldering, GPS/IMU integration</li>
+          <li>Embedded Systems &amp; Control: ArduPilot setup, ground vehicle tuning, waypoint navigation</li>
+          <li>Electronics &amp; Wiring: Power distribution design, soldering, GPS/IMU integration</li>
           <li>Systems Integration: Chassis modification, module packaging, calibration workflow</li>
           <li>Hands-On Engineering: Prototyping, debugging, end-to-end system assembly</li>
         </ul>
       </article>
+
 
       <!-- UAV -->
       <article id="uav" class="detail rounded-2xl border p-6 bg-white shadow-sm">
@@ -539,14 +569,24 @@
           <h3 class="text-2xl font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement (In Progress)</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
-        <img src="./images/placeholder.jpg" alt="GTI rear strut brace" class="mt-4 rounded-xl w-full h-auto" />
+
+        <!-- Wide hero image at the start -->
+        <img src="./images/gti/gti2.jpg" alt="GTI rear strut brace - hero"
+            class="mt-4 rounded-xl w-full h-auto object-contain" />
+
         <p class="mt-4 text-slate-700">2025</p>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">Custom upper rear strut brace for a VW MK6 GTI, designed to tie the rear pillars behind the seats for added stiffness and improved handling.</p>
+        <p class="mt-2 text-slate-700">
+          Custom upper rear strut brace for a VW MK6 GTI, designed to tie the rear pillars behind the seats
+          for added stiffness and improved handling.
+        </p>
 
         <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">Measured rear geometry, validated fit with a laser-cut wooden prototype, and fabricated the final brace from metal using waterjet cutting. Pending installation and testing.</p>
+        <p class="mt-2 text-slate-700">
+          Measured rear geometry, validated fit with a laser-cut wooden prototype, and fabricated the final
+          brace from metal using waterjet cutting. Pending installation and testing.
+        </p>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
@@ -554,7 +594,14 @@
           <li>Prototype validation with laser cutting.</li>
           <li>Final fabrication with waterjet cutting.</li>
         </ul>
+
+        <!-- Secondary smaller image at the end -->
+        <div class="mt-6 flex justify-center">
+          <img src="./images/gti/gti3.jpg" alt="GTI rear strut brace - fabrication"
+              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+        </div>
       </article>
+
 
       <!-- Sleep -->
       <article id="sleep" class="detail rounded-2xl border p-6 bg-white shadow-sm">
@@ -562,14 +609,34 @@
           <h3 class="text-2xl font-semibold">Sleep Breath Tracker — Arduino-Based Airflow Monitoring</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
-        <img src="./images/placeholder.jpg" alt="Sleep breath tracker" class="mt-4 rounded-xl w-full h-auto" />
+
+        <!-- Hero image at the top -->
+        <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker - device overview"
+            class="mt-4 rounded-xl w-full h-auto object-contain" />
+
         <p class="mt-4 text-slate-700">2022</p>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">A custom device designed to monitor and log breathing airflow during sleep, built for a family member with sleep-related disorders. The system used a pressure sensor and microcontroller to record airflow patterns overnight for later analysis.</p>
+        <p class="mt-2 text-slate-700">
+          A custom device designed to monitor and log breathing airflow during sleep, built for a family member
+          with sleep-related disorders. The system used a pressure sensor and microcontroller to record airflow
+          patterns overnight for later analysis.
+        </p>
 
         <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">I started with a breadboard prototype using an Arduino and a pressure sensor to capture airflow data through a nasal cannula. Once the basic system was working, I implemented filtering and logging so the data could be stored and reviewed. To make it more practical, I transitioned from the breadboard to a custom PCB designed in Autodesk Eagle, creating a compact, single-piece device that could be used outside of a lab setting.</p>
+        <p class="mt-2 text-slate-700">
+          I started with a breadboard prototype using an Arduino and a pressure sensor to capture airflow data
+          through a nasal cannula. Once the basic system was working, I implemented filtering and logging so the
+          data could be stored and reviewed. To make it more practical, I transitioned from the breadboard to a
+          custom PCB designed in Autodesk Eagle, creating a compact, single-piece device that could be used
+          outside of a lab setting.
+        </p>
+
+        <!-- Image under Process -->
+        <div class="mt-4 flex justify-center">
+          <img src="./images/sleep/sleep2.jpg" alt="Sleep breath tracker - PCB"
+              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+        </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
@@ -587,20 +654,46 @@
         </ul>
       </article>
 
+
       <!-- Skateboards -->
       <article id="esk8" class="detail rounded-2xl border p-6 bg-white shadow-sm">
         <div class="flex items-start justify-between gap-4">
           <h3 class="text-2xl font-semibold">Electric Skateboards – First “Real” Engineering Projects</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
-        <img src="./images/placeholder.jpg" alt="Electric skateboards" class="mt-4 rounded-xl w-full h-auto" />
+
+        <!-- Top images stacked vertically -->
+        <div class="mt-4 space-y-4">
+          <img src="./images/esk8/esk82.jpg" alt="Electric skateboard project - image 2"
+              class="rounded-xl w-full h-auto object-contain" />
+          <img src="./images/esk8/esk83.jpg" alt="Electric skateboard project - image 3"
+              class="rounded-xl w-full h-auto object-contain" />
+        </div>
+
         <p class="mt-4 text-slate-700">2017 - 2019</p>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">A set of DIY electric skateboards that became my first real engineering projects and sparked my interest in electric vehicles.</p>
+        <p class="mt-2 text-slate-700">
+          A set of DIY electric skateboards that became my first real engineering projects and sparked my
+          interest in electric vehicles.
+        </p>
 
         <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">I started by building a deck with my neighbor, ordering hub motors, a controller, and batteries from eBay, and rigging everything together in a Tupperware enclosure to make a working electric skateboard. After that first success, I wanted to push further and built a belt-drive board using a store-bought deck and enclosure. This time I integrated a VESC motor controller — the same architecture I would later use in larger EV projects like my motorcycle conversion. These projects taught me the basics of batteries, controllers, wiring, and mechanical packaging, while also giving me the excitement of riding something I built myself.</p>
+        <p class="mt-2 text-slate-700">
+          I started by building a deck with my neighbor, ordering hub motors, a controller, and batteries
+          from eBay, and rigging everything together in a Tupperware enclosure to make a working electric
+          skateboard. After that first success, I wanted to push further and built a belt-drive board using
+          a store-bought deck and enclosure. This time I integrated a VESC motor controller — the same
+          architecture I would later use in larger EV projects like my motorcycle conversion. These projects
+          taught me the basics of batteries, controllers, wiring, and mechanical packaging, while also giving
+          me the excitement of riding something I built myself.
+        </p>
+
+        <!-- Image above Technical Work -->
+        <div class="mt-4 flex justify-center">
+          <img src="./images/esk8/esk84.jpg" alt="Electric skateboard project - image 4"
+              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+        </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
@@ -618,7 +711,7 @@
           <li>Self-directed prototyping and iterative design</li>
         </ul>
       </article>
-    </section>
+
 
     <!-- About (populated image) -->
     <section id="about" class="max-w-5xl mx-auto px-4 py-10">
