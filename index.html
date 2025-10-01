@@ -26,6 +26,9 @@
     <style>
       html { scroll-behavior: smooth; }
       .card:hover { transform: translateY(-2px); }
+      /* Hide all detail sections unless targeted */
+      .detail { display: none; }
+      .detail:target { display: block; }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-900">
@@ -65,11 +68,10 @@
 
       <!-- 9 tiles -->
       <div class="mt-6 grid gap-5 md:grid-cols-2">
-        <!-- 1. SURGE (populated image) -->
+        <!-- 1. SURGE -->
         <a href="#surge" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/surge/surge1.jpg" alt="SURGE electric CBR600RR conversion"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/surge/surge1.jpg" alt="SURGE electric CBR600RR conversion" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -79,11 +81,10 @@
           </div>
         </a>
 
-        <!-- 2. Festival of Lights (fol1 thumbnail) -->
+        <!-- 2. Festival of Lights -->
         <a href="#fol" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/fol/fol1.jpg" alt="Festival of Lights float engineering"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/fol/fol1.jpg" alt="Festival of Lights float engineering" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -96,8 +97,7 @@
         <!-- 3. FSAE -->
         <a href="#fsae" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/fsae/fsae1.jpg" alt="Berkeley Formula Racing"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/fsae/fsae1.jpg" alt="Berkeley Formula Racing" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -110,8 +110,7 @@
         <!-- 4. Exoskeleton -->
         <a href="#exo" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/exo/exo1.jpg" alt="Lower-limb exoskeleton research"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/exo/exo1.jpg" alt="Lower-limb exoskeleton research" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -124,8 +123,7 @@
         <!-- 5. Rover -->
         <a href="#rover" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/rover/rover1.jpg" alt="Autonomous rover"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/rover/rover1.jpg" alt="Autonomous rover" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -138,8 +136,7 @@
         <!-- 6. UAV -->
         <a href="#uav" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="Autonomous hexacopter"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/placeholder.jpg" alt="Autonomous hexacopter" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -152,8 +149,7 @@
         <!-- 7. GTI -->
         <a href="#gti" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/gti/gti1.jpg" alt="MK6 GTI rear strut brace"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/gti/gti1.jpg" alt="MK6 GTI rear strut brace" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -166,8 +162,7 @@
         <!-- 8. Sleep -->
         <a href="#sleep" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker device"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker device" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -180,8 +175,7 @@
         <!-- 9. ESK8 -->
         <a href="#esk8" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/esk8/esk81.jpg" alt="Electric skateboards"
-                 class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/esk8/esk81.jpg" alt="Electric skateboards" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -195,12 +189,7 @@
 
     <!-- Detail sections -->
     <section class="max-w-5xl mx-auto px-4 pb-6 space-y-8">
-      <style>
-        .detail { display: none; }
-        .detail:target { display: block; }
-      </style>
-
-      <!-- SURGE (populated images) -->
+      <!-- SURGE -->
       <article id="surge" class="detail rounded-2xl border p-6 bg-white shadow-sm">
         <div class="flex items-start justify-between gap-4">
           <h3 class="text-2xl font-semibold">SURGE Electric Motorcycles – CBR600RR Electric Conversion (In Progress)</h3>
@@ -246,7 +235,7 @@
           <li>Documented lessons to inform the next bike’s upscaled battery and improved chassis design.</li>
         </ul>
 
-        <!-- Ultra-wide image that scales to container width -->
+        <!-- Ultra-wide image scales to container width -->
         <img src="./images/surge/surge3.jpg" alt="SURGE ultrawide component" class="mt-5 w-full h-auto rounded-xl" />
 
         <h4 class="mt-6 font-medium">Skills</h4>
@@ -269,22 +258,20 @@
         </div>
       </article>
 
-      <!-- Festival of Lights (FOL with image sets) -->
+      <!-- Festival of Lights -->
       <article id="fol" class="detail rounded-2xl border p-6 bg-white shadow-sm">
         <div class="flex items-start justify-between gap-4">
           <h3 class="text-2xl font-semibold">Los Altos Festival of Lights — Float Engineering Program</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
 
-        <!-- TOP: fol2 + fol3, centered, equal height, no clipping -->
+        <!-- TOP: fol2 + fol3 centered, equal height, no clipping -->
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol2.jpg" alt="Festival of Lights - image 2"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol2.jpg" alt="Festival of Lights - image 2" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol3.jpg" alt="Festival of Lights - image 3"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol3.jpg" alt="Festival of Lights - image 3" class="max-h-full max-w-full object-contain" />
           </div>
         </div>
 
@@ -309,15 +296,13 @@
           experience with float mechanics, from designing a stepper motor–driven carousel to wrenching on old car chassis.
         </p>
 
-        <!-- ABOVE TECHNICAL WORK: fol4 + fol5, centered, equal height, no clipping -->
+        <!-- ABOVE TECHNICAL WORK: fol4 + fol5 centered, equal height, no clipping -->
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol4.jpg" alt="Festival of Lights - image 4"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol4.jpg" alt="Festival of Lights - image 4" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol5.jpg" alt="Festival of Lights - image 5"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol5.jpg" alt="Festival of Lights - image 5" class="max-h-full max-w-full object-contain" />
           </div>
         </div>
 
@@ -339,16 +324,13 @@
           <li><span class="font-medium">Teamwork &amp; Leadership:</span> worked with peers to grow the program, supported new contributors, and documented systems for reuse</li>
         </ul>
 
-
-        <!-- END: fol6 + fol7, centered, equal height, no clipping -->
+        <!-- END: fol6 + fol7 centered, equal height, no clipping -->
         <div class="mt-6 grid gap-4 sm:grid-cols-2">
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol6.jpg" alt="Festival of Lights - image 6"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol6.jpg" alt="Festival of Lights - image 6" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol7.jpg" alt="Festival of Lights - image 7"
-                class="max-h-full max-w-full object-contain" />
+            <img src="./images/fol/fol7.jpg" alt="Festival of Lights - image 7" class="max-h-full max-w-full object-contain" />
           </div>
         </div>
 
@@ -364,12 +346,10 @@
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
 
-        <!-- TOP: fsae1 + fsae2 side by side (cropped to fit, no grey boxes) -->
+        <!-- TOP: fsae1 + fsae2 cropped to fit -->
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <img src="./images/fsae/fsae1.jpg" alt="FSAE image 1"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-          <img src="./images/fsae/fsae2.jpg" alt="FSAE image 2"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/fsae/fsae1.jpg" alt="FSAE image 1" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/fsae/fsae2.jpg" alt="FSAE image 2" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
         </div>
 
         <p class="mt-4 text-slate-700">2023 - 2024</p>
@@ -390,8 +370,7 @@
 
         <!-- Single image under Process (cropped to fit) -->
         <div class="mt-4">
-          <img src="./images/fsae/fsae3.jpg" alt="FSAE image 3"
-              class="w-full h-64 sm:h-80 md:h-[28rem] object-cover rounded-xl" />
+          <img src="./images/fsae/fsae3.jpg" alt="FSAE image 3" class="w-full h-64 sm:h-80 md:h-[28rem] object-cover rounded-xl" />
         </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
@@ -409,10 +388,9 @@
           <li><span class="font-medium">Project experience:</span> exposure to large-scale engineering projects and team culture</li>
         </ul>
 
-        <!-- Bottom: one long image (fsae4, uncropped, no scroll) -->
+        <!-- Bottom: one long image (uncropped, no scroll) -->
         <div class="mt-6">
-          <img src="./images/fsae/fsae4.jpg" alt="FSAE long image"
-              class="w-full h-auto rounded-xl" />
+          <img src="./images/fsae/fsae4.jpg" alt="FSAE long image" class="w-full h-auto rounded-xl" />
         </div>
 
         <div class="mt-6">
@@ -427,10 +405,9 @@
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
 
-        <!-- Main hero image -->
+        <!-- Main hero image (smaller) -->
         <div class="mt-6 flex justify-center">
-          <img src="./images/exo/exo3.jpg" alt="Exoskeleton research (detail)"
-              class="rounded-xl max-w-sm w-full h-auto" />
+          <img src="./images/exo/exo3.jpg" alt="Exoskeleton research (detail)" class="rounded-xl max-w-sm w-full h-auto" />
         </div>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
@@ -457,8 +434,7 @@
 
         <!-- Smaller supporting image -->
         <div class="mt-6 flex justify-center">
-          <img src="./images/exo/exo2.jpg" alt="Exoskeleton research (detail)"
-              class="rounded-xl max-w-sm w-full h-auto" />
+          <img src="./images/exo/exo2.jpg" alt="Exoskeleton research (detail)" class="rounded-xl max-w-sm w-full h-auto" />
         </div>
 
         <h4 class="mt-6 font-medium">Skills &amp; Tools</h4>
@@ -469,7 +445,6 @@
         </ul>
       </article>
 
-
       <!-- Rover -->
       <article id="rover" class="detail rounded-2xl border p-6 bg-white shadow-sm">
         <div class="flex items-start justify-between gap-4">
@@ -477,12 +452,10 @@
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
 
-        <!-- TOP: rover2 + rover3 (ok to crop, white background) -->
+        <!-- TOP: rover2 + rover3 cropped -->
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <img src="./images/rover/rover2.jpg" alt="Autonomous rover - image 2"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-          <img src="./images/rover/rover3.jpg" alt="Autonomous rover - image 3"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/rover/rover2.jpg" alt="Autonomous rover - image 2" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/rover/rover3.jpg" alt="Autonomous rover - image 3" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
         </div>
 
         <p class="mt-4 text-slate-700">2021</p>
@@ -502,15 +475,13 @@
           tuning and testing ArduPilot’s navigation stack for stable waypoint following.
         </p>
 
-        <!-- UNDER PROCESS: rover4 + rover5 (no clipping, full image shown) -->
+        <!-- UNDER PROCESS: rover4 + rover5 (no clipping) -->
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
-            <img src="./images/rover/rover4.jpg" alt="Autonomous rover - image 4"
-                class="max-h-full max-w-full object-contain rounded-xl" />
+            <img src="./images/rover/rover4.jpg" alt="Autonomous rover - image 4" class="max-h-full max-w-full object-contain rounded-xl" />
           </div>
           <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
-            <img src="./images/rover/rover5.jpg" alt="Autonomous rover - image 5"
-                class="max-h-full max-w-full object-contain rounded-xl" />
+            <img src="./images/rover/rover5.jpg" alt="Autonomous rover - image 5" class="max-h-full max-w-full object-contain rounded-xl" />
           </div>
         </div>
 
@@ -529,7 +500,6 @@
           <li>Hands-On Engineering: Prototyping, debugging, end-to-end system assembly</li>
         </ul>
       </article>
-
 
       <!-- UAV -->
       <article id="uav" class="detail rounded-2xl border p-6 bg-white shadow-sm">
@@ -570,9 +540,8 @@
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
 
-        <!-- Wide hero image at the start -->
-        <img src="./images/gti/gti2.jpg" alt="GTI rear strut brace - hero"
-            class="mt-4 rounded-xl w-full h-auto object-contain" />
+        <!-- Wide hero image at the start (uncropped) -->
+        <img src="./images/gti/gti2.jpg" alt="GTI rear strut brace - hero" class="mt-4 rounded-xl w-full h-auto object-contain" />
 
         <p class="mt-4 text-slate-700">2025</p>
 
@@ -597,11 +566,9 @@
 
         <!-- Secondary smaller image at the end -->
         <div class="mt-6 flex justify-center">
-          <img src="./images/gti/gti3.jpg" alt="GTI rear strut brace - fabrication"
-              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+          <img src="./images/gti/gti3.jpg" alt="GTI rear strut brace - fabrication" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
         </div>
       </article>
-
 
       <!-- Sleep -->
       <article id="sleep" class="detail rounded-2xl border p-6 bg-white shadow-sm">
@@ -611,8 +578,7 @@
         </div>
 
         <!-- Hero image at the top -->
-        <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker - device overview"
-            class="mt-4 rounded-xl w-full h-auto object-contain" />
+        <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker - device overview" class="mt-4 rounded-xl w-full h-auto object-contain" />
 
         <p class="mt-4 text-slate-700">2022</p>
 
@@ -634,8 +600,7 @@
 
         <!-- Image under Process -->
         <div class="mt-4 flex justify-center">
-          <img src="./images/sleep/sleep2.jpg" alt="Sleep breath tracker - PCB"
-              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+          <img src="./images/sleep/sleep2.jpg" alt="Sleep breath tracker - PCB" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
         </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
@@ -654,7 +619,6 @@
         </ul>
       </article>
 
-
       <!-- Skateboards -->
       <article id="esk8" class="detail rounded-2xl border p-6 bg-white shadow-sm">
         <div class="flex items-start justify-between gap-4">
@@ -664,10 +628,8 @@
 
         <!-- Top images stacked vertically -->
         <div class="mt-4 space-y-4">
-          <img src="./images/esk8/esk82.jpg" alt="Electric skateboard project - image 2"
-              class="rounded-xl w-full h-auto object-contain" />
-          <img src="./images/esk8/esk83.jpg" alt="Electric skateboard project - image 3"
-              class="rounded-xl w-full h-auto object-contain" />
+          <img src="./images/esk8/esk82.jpg" alt="Electric skateboard project - image 2" class="rounded-xl w-full h-auto object-contain" />
+          <img src="./images/esk8/esk83.jpg" alt="Electric skateboard project - image 3" class="rounded-xl w-full h-auto object-contain" />
         </div>
 
         <p class="mt-4 text-slate-700">2017 - 2019</p>
@@ -691,8 +653,7 @@
 
         <!-- Image above Technical Work -->
         <div class="mt-4 flex justify-center">
-          <img src="./images/esk8/esk84.jpg" alt="Electric skateboard project - image 4"
-              class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+          <img src="./images/esk8/esk84.jpg" alt="Electric skateboard project - image 4" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
         </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
@@ -711,9 +672,9 @@
           <li>Self-directed prototyping and iterative design</li>
         </ul>
       </article>
+    </section>
 
-
-    <!-- About (populated image) -->
+    <!-- About -->
     <section id="about" class="max-w-5xl mx-auto px-4 py-10">
       <h2 class="text-2xl sm:text-3xl font-semibold">About</h2>
       <div class="mt-4 grid gap-6 sm:grid-cols-3 items-start">
@@ -756,7 +717,7 @@
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear()
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
