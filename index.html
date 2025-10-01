@@ -136,7 +136,7 @@
         <!-- 6. UAV -->
         <a href="#uav" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
           <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/placeholder.jpg" alt="Autonomous hexacopter" class="absolute inset-0 w-full h-full object-cover" />
+            <img src="./images/uav/uav1.jpg" alt="Autonomous hexacopter" class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="absolute bottom-0 p-4 text-white">
@@ -507,14 +507,37 @@
           <h3 class="text-2xl font-semibold">Autonomous Hexacopter — UAV Design and Testing</h3>
           <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
         </div>
-        <img src="./images/placeholder.jpg" alt="Hexacopter" class="mt-4 rounded-xl w-full h-auto" />
+
+        <!-- Smaller hero: uav1 -->
+        <div class="mt-4 flex justify-center">
+          <img src="./images/uav/uav1.jpg" alt="Hexacopter overview"
+              class="rounded-xl w-full h-auto max-w-3xl object-contain" />
+        </div>
+
         <p class="mt-4 text-slate-700">2023</p>
 
         <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">A school project that I expanded into a fully functional autonomous hexacopter. The drone ran ArduPilot firmware with GPS-based navigation, offering flight modes like position hold, stabilization, and waypoint following.</p>
+        <p class="mt-2 text-slate-700">
+          A school project that I expanded into a fully functional autonomous hexacopter. The drone ran ArduPilot firmware with
+          GPS-based navigation, offering flight modes like position hold, stabilization, and waypoint following.
+        </p>
 
         <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">I designed a hexacopter frame in CAD and laser-cut it from wood and plastic. The first version was too weak and failed during early flight tests, so I revised the design and rebuilt the frame to handle flight stresses more reliably. I reused many of the electronics from my earlier autonomous rover, including the ArduPilot controller, GPS, and power modules, which let me focus on the mechanical design and flight setup. Building and iterating on this project gave me hands-on exposure to UAV assembly, structural design tradeoffs, and tuning autonomous flight systems.</p>
+        <p class="mt-2 text-slate-700">
+          I designed a hexacopter frame in CAD and laser-cut it from wood and plastic. The first version was too weak and failed during early
+          flight tests, so I revised the design and rebuilt the frame to handle flight stresses more reliably. I reused many of the electronics
+          from my earlier autonomous rover, including the ArduPilot controller, GPS, and power modules, which let me focus on the mechanical
+          design and flight setup. Building and iterating on this project gave me hands-on exposure to UAV assembly, structural design tradeoffs,
+          and tuning autonomous flight systems.
+        </p>
+
+        <!-- Under Process: uav2 + uav3 -->
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <img src="./images/uav/uav2.jpg" alt="Hexacopter build detail"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+          <img src="./images/uav/uav3.jpg" alt="Hexacopter testing"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+        </div>
 
         <h4 class="mt-4 font-medium">Technical Work</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
@@ -524,14 +547,22 @@
           <li>Calibrated GPS/IMU sensors and tuned flight performance.</li>
         </ul>
 
-        <h4 class="mt-4 font-medium">Skills & Tools</h4>
+        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
         <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
           <li>CAD design, laser cutting, iterative prototyping</li>
           <li>UAV assembly, flight testing, and tuning</li>
           <li>ArduPilot configuration and sensor calibration</li>
           <li>Practical experience with failure, redesign, and testing</li>
         </ul>
+
+        <!-- Smaller final image: uav4 -->
+        <div class="mt-6 flex justify-center">
+          <img src="./images/uav/uav4.jpg" alt="Hexacopter final build"
+              class="rounded-xl w-full h-auto max-w-3xl object-contain" />
+        </div>
       </article>
+
+
 
       <!-- GTI -->
       <article id="gti" class="detail rounded-2xl border p-6 bg-white shadow-sm">
