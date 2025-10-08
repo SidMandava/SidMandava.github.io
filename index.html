@@ -1,752 +1,854 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sid Mandava — Mechanical Engineer</title>
-    <meta name="description" content="Projects and work by Sid Mandava: EVs, robotics, embedded systems, and mechanical design." />
-    <meta property="og:title" content="Sid Mandava — Mechanical Engineer" />
-    <meta name="twitter:title" content="Sid Mandava — Mechanical Engineer" />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              calBlue: '#003262',
-              calGold: '#FDB515',
-            }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sid Mandava — Mechanical Engineer</title>
+  <meta name="description"
+    content="Projects and work by Sid Mandava: EVs, robotics, embedded systems, and mechanical design." />
+  <meta property="og:title" content="Sid Mandava — Mechanical Engineer" />
+  <meta name="twitter:title" content="Sid Mandava — Mechanical Engineer" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            calBlue: '#003262',
+            calGold: '#FDB515',
           }
         }
       }
-    </script>
+    }
+  </script>
 
-    <style>
-      html { scroll-behavior: smooth; }
-      .card:hover { transform: translateY(-2px); }
-      /* Hide all detail sections unless targeted */
-      .detail { display: none; }
-      .detail:target { display: block; }
-    </style>
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <!-- Header -->
-    <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#home" class="font-semibold tracking-tight flex items-center gap-2">
-          <span class="inline-block w-2.5 h-6 bg-calGold rounded-full"></span>
-          <span>Sid Mandava</span>
-        </a>
-        <nav class="hidden sm:flex items-center gap-6 text-sm">
-          <a class="hover:opacity-80" href="#projects">Projects</a>
-          <a class="hover:opacity-80" href="#about">About</a>
-          <a class="hover:opacity-80" href="#contact">Contact</a>
-        </nav>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Hide all detail sections unless targeted */
+    .detail {
+      display: none;
+    }
+
+    .detail:target {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight flex items-center gap-2">
+        <span class="inline-block w-2.5 h-6 bg-calGold rounded-full"></span>
+        <span>Sid Mandava</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm">
+        <a class="hover:opacity-80" href="#projects">Projects</a>
+        <a class="hover:opacity-80" href="#about">About</a>
+        <a class="hover:opacity-80" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="max-w-5xl mx-auto px-4 pt-10 pb-6">
+    <h1 class="text-3xl sm:text-5xl font-bold leading-tight">
+      Applying engineering fundamentals and full-stack skills to design and build end-to-end systems that solve real
+      problems —
+      <span class="text-calBlue">from concept to hardware.</span>
+    </h1>
+    <p class="mt-4 text-slate-600 max-w-3xl">
+      I’m a Mechanical Engineering student at UC Berkeley, born and raised in the Bay Area, with broad experience in
+      design and hands-on building. My work spans mechanical systems, robotics, and fabrication — from EVs to assistive
+      robotics to UAVs. I’m excited by the challenge of applying fundamentals across diverse fields, from surgical
+      robotics to humanoids and beyond. Right now, my biggest focus is building a motorcycle for SURGE while continuing
+      to grow as a full-stack engineer.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      <a href="#projects"
+        class="inline-flex items-center gap-2 rounded-full bg-calBlue text-white px-5 py-2 hover:opacity-90 shadow-md">Projects</a>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-full border px-5 py-2 hover:bg-slate-100">Get in
+        Touch</a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-2xl sm:text-3xl font-semibold">Projects</h2>
+
+    <!-- 9 tiles -->
+    <div class="mt-6 grid gap-5 md:grid-cols-2">
+      <!-- 1. SURGE -->
+      <a href="#surge" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/surge/surge1.jpg" alt="SURGE electric CBR600RR conversion"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2025 – Present</div>
+          <h3 class="text-lg font-semibold">SURGE — CBR600RR Electric Conversion</h3>
+          <p class="text-sm opacity-90">Custom Li-ion pack · subframe + powertrain integration</p>
+        </div>
+      </a>
+
+      <!-- 2. Festival of Lights -->
+      <a href="#fol" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/fol/fol1.jpg" alt="Festival of Lights float engineering"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2021 – 2023</div>
+          <h3 class="text-lg font-semibold">Festival of Lights — Float Engineering</h3>
+          <p class="text-sm opacity-90">Raspberry Pi control · battery systems · carousel</p>
+        </div>
+      </a>
+
+      <!-- 3. FSAE -->
+      <a href="#fsae" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/fsae/fsae1.jpg" alt="Berkeley Formula Racing"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2023 – 2024</div>
+          <h3 class="text-lg font-semibold">Berkeley Formula Racing — Brakes & Driver Interface</h3>
+          <p class="text-sm opacity-90">Brake modeling · composites · chassis tabs</p>
+        </div>
+      </a>
+
+      <!-- 4. Exoskeleton -->
+      <a href="#exo" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/exo/exo1.jpg" alt="Lower-limb exoskeleton research"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2022</div>
+          <h3 class="text-lg font-semibold">Lower Limb Exoskeleton — SJSU</h3>
+          <p class="text-sm opacity-90">Hip subassembly CAD · ESP32 (CAN/I²C)</p>
+        </div>
+      </a>
+
+      <!-- 5. Rover -->
+      <a href="#rover" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/rover/rover1.jpg" alt="Autonomous rover"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2021</div>
+          <h3 class="text-lg font-semibold">Autonomous Rover — ArduPilot</h3>
+          <p class="text-sm opacity-90">GPS/IMU · wiring · waypoint navigation</p>
+        </div>
+      </a>
+
+      <!-- 6. UAV -->
+      <a href="#uav" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/uav/uav1.jpg" alt="Autonomous hexacopter"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2023</div>
+          <h3 class="text-lg font-semibold">Autonomous Hexacopter — UAV Design & Testing</h3>
+          <p class="text-sm opacity-90">Custom frame · ArduPilot · tuning</p>
+        </div>
+      </a>
+
+      <!-- 7. GTI -->
+      <a href="#gti" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/gti/gti1.jpg" alt="MK6 GTI rear strut brace"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2025 – In progress</div>
+          <h3 class="text-lg font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement</h3>
+          <p class="text-sm opacity-90">CAD · prototype · waterjet fabrication</p>
+        </div>
+      </a>
+
+      <!-- 8. Sleep -->
+      <a href="#sleep" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker device"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2022</div>
+          <h3 class="text-lg font-semibold">Sleep Breath Tracker — Arduino Airflow Monitor</h3>
+          <p class="text-sm opacity-90">Arduino · pressure sensor · PCB</p>
+        </div>
+      </a>
+
+      <!-- 9. ESK8 -->
+      <a href="#esk8" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
+        <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
+          <img src="./images/esk8/esk81.jpg" alt="Electric skateboards"
+            class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 p-4 text-white">
+          <div class="text-xs uppercase tracking-wide opacity-80">2017 – 2019</div>
+          <h3 class="text-lg font-semibold">Electric Skateboards — First Engineering Projects</h3>
+          <p class="text-sm opacity-90">Hub & belt drive · VESC</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Detail sections -->
+  <section class="max-w-5xl mx-auto px-4 pb-6 space-y-8">
+    <!-- SURGE -->
+    <article id="surge" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">SURGE Electric Motorcycles – CBR600RR Electric Conversion (In Progress)</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
       </div>
-    </header>
 
-    <!-- Hero -->
-    <section id="home" class="max-w-5xl mx-auto px-4 pt-10 pb-6">
-      <h1 class="text-3xl sm:text-5xl font-bold leading-tight">
-        Applying engineering fundamentals and full-stack skills to design and build end-to-end systems that solve real problems —
-        <span class="text-calBlue">from concept to hardware.</span>
-      </h1>
-      <p class="mt-4 text-slate-600 max-w-3xl">
-        I’m a Mechanical Engineering student at UC Berkeley, born and raised in the Bay Area, with broad experience in design and hands-on building. My work spans mechanical systems, robotics, and fabrication — from EVs to assistive robotics to UAVs. I’m excited by the challenge of applying fundamentals across diverse fields, from surgical robotics to humanoids and beyond. Right now, my biggest focus is building a motorcycle for SURGE while continuing to grow as a full-stack engineer.
+      <!-- Hero -->
+      <img src="./images/surge/surge1.jpg" alt="SURGE build hero" class="mt-4 rounded-xl w-full h-auto" />
+      <p class="mt-4 text-slate-700">2025 - Present</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">An ongoing project to convert a 2003 Honda CBR600RR into a fully electric
+        motorcycle. The build serves as SURGE’s first step toward a competitive electric superbike platform, targeting
+        ~25 kW peak output from a custom-designed lithium-ion battery system and integrated powertrain.</p>
+
+      <h4 class="mt-4 font-medium">Where It’s Going</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>A larger-capacity, higher-discharge pack with greater modularity, control, and cooling strategies.</li>
+        <li>Subframe redesign for manufacturability and structural efficiency.</li>
+        <li>A complete running prototype targeted for the 2025–26 season.</li>
+      </ul>
+
+      <!-- Image above My Role -->
+      <img src="./images/surge/surge2.jpg" alt="SURGE progress" class="mt-4 rounded-xl w-full h-auto" />
+
+      <h4 class="mt-4 font-medium">My Role</h4>
+      <p class="mt-2 text-slate-700">I joined the team at the start of 2025, drove the process of getting things
+        started, contributed across multiple areas of the build, and eventually took on engineering leadership by
+        helping establish strong technical workflows and bringing together a committed group of people.</p>
+
+      <h5 class="mt-3 font-medium">Chassis & Drivetrain Integration</h5>
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li>Designed a subframe structure to replace the internal combustion engine and drivetrain with electric
+          components.</li>
+        <li>Prototyped and manufactured mounting systems using waterjet-cut plates, 3D printing, and other shop
+          processes to validate fitment.</li>
+      </ul>
+
+      <h5 class="mt-3 font-medium">Battery Pack Design</h5>
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li>Designed and built 26s4p Molicel P42A pack (~1.6 kWh) with careful busbar sizing and interconnects.</li>
+        <li>Researched BMS requirements and evaluated busbar conductance to guide materials and geometry.</li>
+      </ul>
+
+      <h5 class="mt-3 font-medium">Technical Research & System Decisions</h5>
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li>Investigated motor/controller options and implications on packaging and cooling.</li>
+        <li>Established design criteria for capacity, voltage, and continuous vs. peak performance.</li>
+        <li>Documented lessons to inform the next bike’s upscaled battery and improved chassis design.</li>
+      </ul>
+
+      <!-- Ultra-wide image scales to container width -->
+      <img src="./images/surge/surge3.jpg" alt="SURGE ultrawide component" class="mt-5 w-full h-auto rounded-xl" />
+
+      <h4 class="mt-6 font-medium">Skills</h4>
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li><b>Mechanical Design & Fabrication:</b> SolidWorks, Onshape, 3D printing, waterjet cutting, laser cutting,
+          prototyping, subframe design</li>
+        <li><b>Energy Systems:</b> Lithium-ion battery pack design, busbar sizing & interconnect design, spot welding,
+          BMS research & integration planning, thermal considerations</li>
+        <li><b>Systems Integration:</b> Drivetrain alignment, packaging analysis, cooling tradeoffs, chassis
+          modification for EV components</li>
+        <li><b>Engineering Practices:</b> Cross-team collaboration, design reviews, scope definition, documentation for
+          iteration and scaling</li>
+      </ul>
+
+      <!-- Bottom trio -->
+      <div class="mt-6 grid sm:grid-cols-3 gap-3">
+        <img src="./images/surge/surge4.jpg" alt="SURGE detail 1" class="rounded-xl w-full h-auto" />
+        <img src="./images/surge/surge5.jpg" alt="SURGE detail 2" class="rounded-xl w-full h-auto" />
+        <img src="./images/surge/surge6.jpg" alt="SURGE detail 3" class="rounded-xl w-full h-auto" />
+      </div>
+
+      <div class="mt-6">
+        <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
+      </div>
+    </article>
+
+    <!-- Festival of Lights -->
+    <article id="fol" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Los Altos Festival of Lights — Float Engineering Program</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- TOP: fol2 + fol3 centered, equal height, no clipping -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol2.jpg" alt="Festival of Lights - image 2"
+            class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol3.jpg" alt="Festival of Lights - image 3"
+            class="max-h-full max-w-full object-contain" />
+        </div>
+      </div>
+
+      <p class="mt-4 text-slate-700">2021 - 2023</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A community program that brought students into the Festival of Lights Parade to maintain and improve decades-old
+        holiday floats.
+        What began as simple maintenance grew into a program where I helped design and implement a reusable control and
+        power system that
+        modernized floats and scaled across the parade.
       </p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <a href="#projects" class="inline-flex items-center gap-2 rounded-full bg-calBlue text-white px-5 py-2 hover:opacity-90 shadow-md">Projects</a>
-        <a href="#contact" class="inline-flex items-center gap-2 rounded-full border px-5 py-2 hover:bg-slate-100">Get in Touch</a>
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="max-w-5xl mx-auto px-4 py-8">
-      <h2 class="text-2xl sm:text-3xl font-semibold">Projects</h2>
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        As students working on the floats, we realized the opportunity we had to do more than just maintenance. I
+        contributed to developing a
+        Raspberry Pi–based control system that allowed lights, pneumatics, servos, and sound to be programmed and
+        synchronized into sequences,
+        paired with battery-based power systems to replace gas generators.
+      </p>
+      <p class="mt-2 text-slate-700">
+        As the program grew, I became more involved in helping new members apply these systems. The architecture we
+        created was adopted as the
+        standard approach and continues to be implemented on floats beyond the ones I directly worked on. Along the way,
+        I also got hands-on
+        experience with float mechanics, from designing a stepper motor–driven carousel to wrenching on old car chassis.
+      </p>
 
-      <!-- 9 tiles -->
-      <div class="mt-6 grid gap-5 md:grid-cols-2">
-        <!-- 1. SURGE -->
-        <a href="#surge" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/surge/surge1.jpg" alt="SURGE electric CBR600RR conversion" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2025 – Present</div>
-            <h3 class="text-lg font-semibold">SURGE — CBR600RR Electric Conversion</h3>
-            <p class="text-sm opacity-90">Custom Li-ion pack · subframe + powertrain integration</p>
-          </div>
-        </a>
-
-        <!-- 2. Festival of Lights -->
-        <a href="#fol" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/fol/fol1.jpg" alt="Festival of Lights float engineering" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2021 – 2023</div>
-            <h3 class="text-lg font-semibold">Festival of Lights — Float Engineering</h3>
-            <p class="text-sm opacity-90">Raspberry Pi control · battery systems · carousel</p>
-          </div>
-        </a>
-
-        <!-- 3. FSAE -->
-        <a href="#fsae" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/fsae/fsae1.jpg" alt="Berkeley Formula Racing" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2023 – 2024</div>
-            <h3 class="text-lg font-semibold">Berkeley Formula Racing — Brakes & Driver Interface</h3>
-            <p class="text-sm opacity-90">Brake modeling · composites · chassis tabs</p>
-          </div>
-        </a>
-
-        <!-- 4. Exoskeleton -->
-        <a href="#exo" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/exo/exo1.jpg" alt="Lower-limb exoskeleton research" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2022</div>
-            <h3 class="text-lg font-semibold">Lower Limb Exoskeleton — SJSU</h3>
-            <p class="text-sm opacity-90">Hip subassembly CAD · ESP32 (CAN/I²C)</p>
-          </div>
-        </a>
-
-        <!-- 5. Rover -->
-        <a href="#rover" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/rover/rover1.jpg" alt="Autonomous rover" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2021</div>
-            <h3 class="text-lg font-semibold">Autonomous Rover — ArduPilot</h3>
-            <p class="text-sm opacity-90">GPS/IMU · wiring · waypoint navigation</p>
-          </div>
-        </a>
-
-        <!-- 6. UAV -->
-        <a href="#uav" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/uav/uav1.jpg" alt="Autonomous hexacopter" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2023</div>
-            <h3 class="text-lg font-semibold">Autonomous Hexacopter — UAV Design & Testing</h3>
-            <p class="text-sm opacity-90">Custom frame · ArduPilot · tuning</p>
-          </div>
-        </a>
-
-        <!-- 7. GTI -->
-        <a href="#gti" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/gti/gti1.jpg" alt="MK6 GTI rear strut brace" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2025 – In progress</div>
-            <h3 class="text-lg font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement</h3>
-            <p class="text-sm opacity-90">CAD · prototype · waterjet fabrication</p>
-          </div>
-        </a>
-
-        <!-- 8. Sleep -->
-        <a href="#sleep" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker device" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2022</div>
-            <h3 class="text-lg font-semibold">Sleep Breath Tracker — Arduino Airflow Monitor</h3>
-            <p class="text-sm opacity-90">Arduino · pressure sensor · PCB</p>
-          </div>
-        </a>
-
-        <!-- 9. ESK8 -->
-        <a href="#esk8" class="card group relative rounded-2xl overflow-hidden border bg-white shadow-md transition">
-          <div class="relative w-full overflow-hidden" style="aspect-ratio:16/9">
-            <img src="./images/esk8/esk81.jpg" alt="Electric skateboards" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 p-4 text-white">
-            <div class="text-xs uppercase tracking-wide opacity-80">2017 – 2019</div>
-            <h3 class="text-lg font-semibold">Electric Skateboards — First Engineering Projects</h3>
-            <p class="text-sm opacity-90">Hub & belt drive · VESC</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Detail sections -->
-    <section class="max-w-5xl mx-auto px-4 pb-6 space-y-8">
-      <!-- SURGE -->
-      <article id="surge" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">SURGE Electric Motorcycles – CBR600RR Electric Conversion (In Progress)</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      <!-- ABOVE TECHNICAL WORK: fol4 + fol5 centered, equal height, no clipping -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol4.jpg" alt="Festival of Lights - image 4"
+            class="max-h-full max-w-full object-contain" />
         </div>
-
-        <!-- Hero -->
-        <img src="./images/surge/surge1.jpg" alt="SURGE build hero" class="mt-4 rounded-xl w-full h-auto" />
-        <p class="mt-4 text-slate-700">2025 - Present</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">An ongoing project to convert a 2003 Honda CBR600RR into a fully electric motorcycle. The build serves as SURGE’s first step toward a competitive electric superbike platform, targeting ~25 kW peak output from a custom-designed lithium-ion battery system and integrated powertrain.</p>
-
-        <h4 class="mt-4 font-medium">Where It’s Going</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>A larger-capacity, higher-discharge pack with greater modularity, control, and cooling strategies.</li>
-          <li>Subframe redesign for manufacturability and structural efficiency.</li>
-          <li>A complete running prototype targeted for the 2025–26 season.</li>
-        </ul>
-
-        <!-- Image above My Role -->
-        <img src="./images/surge/surge2.jpg" alt="SURGE progress" class="mt-4 rounded-xl w-full h-auto" />
-
-        <h4 class="mt-4 font-medium">My Role</h4>
-        <p class="mt-2 text-slate-700">I joined the team at the start of 2025, drove the process of getting things started, contributed across multiple areas of the build, and eventually took on engineering leadership by helping establish strong technical workflows and bringing together a committed group of people.</p>
-
-        <h5 class="mt-3 font-medium">Chassis & Drivetrain Integration</h5>
-        <ul class="list-disc list-inside space-y-1 text-slate-700">
-          <li>Designed a subframe structure to replace the internal combustion engine and drivetrain with electric components.</li>
-          <li>Prototyped and manufactured mounting systems using waterjet-cut plates, 3D printing, and other shop processes to validate fitment.</li>
-        </ul>
-
-        <h5 class="mt-3 font-medium">Battery Pack Design</h5>
-        <ul class="list-disc list-inside space-y-1 text-slate-700">
-          <li>Designed and built 26s4p Molicel P42A pack (~1.6 kWh) with careful busbar sizing and interconnects.</li>
-          <li>Researched BMS requirements and evaluated busbar conductance to guide materials and geometry.</li>
-        </ul>
-
-        <h5 class="mt-3 font-medium">Technical Research & System Decisions</h5>
-        <ul class="list-disc list-inside space-y-1 text-slate-700">
-          <li>Investigated motor/controller options and implications on packaging and cooling.</li>
-          <li>Established design criteria for capacity, voltage, and continuous vs. peak performance.</li>
-          <li>Documented lessons to inform the next bike’s upscaled battery and improved chassis design.</li>
-        </ul>
-
-        <!-- Ultra-wide image scales to container width -->
-        <img src="./images/surge/surge3.jpg" alt="SURGE ultrawide component" class="mt-5 w-full h-auto rounded-xl" />
-
-        <h4 class="mt-6 font-medium">Skills</h4>
-        <ul class="list-disc list-inside space-y-1 text-slate-700">
-          <li><b>Mechanical Design & Fabrication:</b> SolidWorks, Onshape, 3D printing, waterjet cutting, laser cutting, prototyping, subframe design</li>
-          <li><b>Energy Systems:</b> Lithium-ion battery pack design, busbar sizing & interconnect design, spot welding, BMS research & integration planning, thermal considerations</li>
-          <li><b>Systems Integration:</b> Drivetrain alignment, packaging analysis, cooling tradeoffs, chassis modification for EV components</li>
-          <li><b>Engineering Practices:</b> Cross-team collaboration, design reviews, scope definition, documentation for iteration and scaling</li>
-        </ul>
-
-        <!-- Bottom trio -->
-        <div class="mt-6 grid sm:grid-cols-3 gap-3">
-          <img src="./images/surge/surge4.jpg" alt="SURGE detail 1" class="rounded-xl w-full h-auto" />
-          <img src="./images/surge/surge5.jpg" alt="SURGE detail 2" class="rounded-xl w-full h-auto" />
-          <img src="./images/surge/surge6.jpg" alt="SURGE detail 3" class="rounded-xl w-full h-auto" />
-        </div>
-
-        <div class="mt-6">
-          <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
-        </div>
-      </article>
-
-      <!-- Festival of Lights -->
-      <article id="fol" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Los Altos Festival of Lights — Float Engineering Program</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- TOP: fol2 + fol3 centered, equal height, no clipping -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol2.jpg" alt="Festival of Lights - image 2" class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol3.jpg" alt="Festival of Lights - image 3" class="max-h-full max-w-full object-contain" />
-          </div>
-        </div>
-
-        <p class="mt-4 text-slate-700">2021 - 2023</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A community program that brought students into the Festival of Lights Parade to maintain and improve decades-old holiday floats.
-          What began as simple maintenance grew into a program where I helped design and implement a reusable control and power system that
-          modernized floats and scaled across the parade.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          As students working on the floats, we realized the opportunity we had to do more than just maintenance. I contributed to developing a
-          Raspberry Pi–based control system that allowed lights, pneumatics, servos, and sound to be programmed and synchronized into sequences,
-          paired with battery-based power systems to replace gas generators.
-        </p>
-        <p class="mt-2 text-slate-700">
-          As the program grew, I became more involved in helping new members apply these systems. The architecture we created was adopted as the
-          standard approach and continues to be implemented on floats beyond the ones I directly worked on. Along the way, I also got hands-on
-          experience with float mechanics, from designing a stepper motor–driven carousel to wrenching on old car chassis.
-        </p>
-
-        <!-- ABOVE TECHNICAL WORK: fol4 + fol5 centered, equal height, no clipping -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol4.jpg" alt="Festival of Lights - image 4" class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol5.jpg" alt="Festival of Lights - image 5" class="max-h-full max-w-full object-contain" />
-          </div>
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Co-developed a Raspberry Pi–based programmable control system for coordinated float animations.</li>
-          <li>Designed and implemented battery-powered systems to replace gas generators across multiple floats.</li>
-          <li>Helped scale adoption of these systems, which are still being implemented on floats today.</li>
-          <li>Contributed mechanical redesigns such as a stepper motor–driven carousel system.</li>
-          <li>Maintained and repaired legacy float chassis, including old car frames and drivetrains.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
-        <ul class="mt-2 list-none p-0 space-y-1 text-slate-700">
-          <li><span class="font-medium">Embedded systems:</span> Raspberry Pi, relays, servos, motor controllers</li>
-          <li><span class="font-medium">Power systems:</span> battery integration, generator replacement, efficiency improvements</li>
-          <li><span class="font-medium">Mechanical systems:</span> stepper motors, pulleys, 3D printing, general fabrication</li>
-          <li><span class="font-medium">Automotive basics:</span> experience working on old car chassis and float structures</li>
-          <li><span class="font-medium">Teamwork &amp; Leadership:</span> worked with peers to grow the program, supported new contributors, and documented systems for reuse</li>
-        </ul>
-
-        <!-- END: fol6 + fol7 centered, equal height, no clipping -->
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol6.jpg" alt="Festival of Lights - image 6" class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
-            <img src="./images/fol/fol7.jpg" alt="Festival of Lights - image 7" class="max-h-full max-w-full object-contain" />
-          </div>
-        </div>
-
-        <div class="mt-6">
-          <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
-        </div>
-      </article>
-
-      <!-- FSAE -->
-      <article id="fsae" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Berkeley Formula Racing — Brakes & Driver Interface Engineer</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- TOP: fsae1 + fsae2 cropped to fit -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <img src="./images/fsae/fsae1.jpg" alt="FSAE image 1" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-          <img src="./images/fsae/fsae2.jpg" alt="FSAE image 2" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-        </div>
-
-        <p class="mt-4 text-slate-700">2023 - 2024</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          UC Berkeley’s Formula SAE team designs and builds a formula-style racecar each year to compete in international student engineering competitions.
-          I contributed as part of the Brakes and Driver Interface subteam.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          My work included supporting MATLAB simulations for brake forces and vehicle dynamics, assisting with a carbon-fiber seat mold, and designing chassis
-          mounting tabs for seat integration and related components. Although my direct involvement was limited, the experience gave me a clearer understanding
-          of how the different technical subsystems come together in a racecar project. It also highlighted how leadership and team culture impact engineering outcomes,
-          motivating me to prioritize better practices and team structures in my later projects.
-        </p>
-
-        <!-- Single image under Process (cropped to fit) -->
-        <div class="mt-4">
-          <img src="./images/fsae/fsae3.jpg" alt="FSAE image 3" class="w-full h-64 sm:h-80 md:h-[28rem] object-cover rounded-xl" />
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Contributed to MATLAB-based brake force and vehicle dynamics simulations.</li>
-          <li>Assisted in mold construction for a carbon-fiber driver seat.</li>
-          <li>Designed chassis mounting tabs for seat and related component integration.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
-        <ul class="mt-2 list-none space-y-1 text-slate-700">
-          <li><span class="font-medium">MATLAB scripting:</span> engineering simulations</li>
-          <li><span class="font-medium">CAD design:</span> chassis integration components</li>
-          <li><span class="font-medium">Composite fabrication:</span> carbon-fiber layup</li>
-          <li><span class="font-medium">Project experience:</span> exposure to large-scale engineering projects and team culture</li>
-        </ul>
-
-        <!-- Bottom: one long image (uncropped, no scroll) -->
-        <div class="mt-6">
-          <img src="./images/fsae/fsae4.jpg" alt="FSAE long image" class="w-full h-auto rounded-xl" />
-        </div>
-
-        <div class="mt-6">
-          <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
-        </div>
-      </article>
-
-      <!-- Exoskeleton -->
-      <article id="exo" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Lower Limb Exoskeleton Research – San José State University</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- Main hero image (smaller) -->
-        <div class="mt-6 flex justify-center">
-          <img src="./images/exo/exo3.jpg" alt="Exoskeleton research (detail)" class="rounded-xl max-w-sm w-full h-auto" />
-        </div>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A faculty-led project at San Jose State University to explore fully 3D-printed lower-limb exoskeleton designs for assistive robotics.
-          I joined the research team as a high school student, supporting both mechanical and embedded tasks.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          Wanting to learn more about engineering research, I reached out to professors and was given the chance to spend a summer working with a team of undergraduate and graduate students.
-          Most of my role was supporting ongoing work: I helped evaluate 3D printing methods and materials, ran test prints, and contributed to design efforts on the hip subassembly.
-          On the electronics side, I programmed an ESP32 to communicate with motors and sensors using I²C and CAN bus, gaining early exposure to embedded systems.
-          The project was still in development when I left, but the experience gave me valuable hands-on learning and an introduction to academic robotics research.
-        </p>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Assisted CAD design and prototyping for the hip subassembly.</li>
-          <li>Researched and tested 3D printing methods and materials.</li>
-          <li>Programmed ESP32 modules for motor/sensor communication via I²C and CAN bus.</li>
-          <li>Collaborated with a team of undergrad and graduate researchers in a lab setting.</li>
-        </ul>
-
-        <!-- Smaller supporting image -->
-        <div class="mt-6 flex justify-center">
-          <img src="./images/exo/exo2.jpg" alt="Exoskeleton research (detail)" class="rounded-xl max-w-sm w-full h-auto" />
-        </div>
-
-        <h4 class="mt-6 font-medium">Skills &amp; Tools</h4>
-        <ul class="mt-2 list-none space-y-1 text-slate-700">
-          <li><span class="font-medium">CAD:</span> SolidWorks, 3D printing, prototyping</li>
-          <li><span class="font-medium">Embedded:</span> ESP32 programming, I²C and CAN bus communication</li>
-          <li><span class="font-medium">Research experience:</span> interdisciplinary robotics research and lab teamwork</li>
-        </ul>
-      </article>
-
-      <!-- Rover -->
-      <article id="rover" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Autonomous Rover – Waypoint Navigation With Ardupilot</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- TOP: rover2 + rover3 cropped -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <img src="./images/rover/rover2.jpg" alt="Autonomous rover - image 2" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-          <img src="./images/rover/rover3.jpg" alt="Autonomous rover - image 3" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-        </div>
-
-        <p class="mt-4 text-slate-700">2021</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A GPS-guided autonomous rover built by converting a standard RC car into a ground vehicle running ArduPilot.
-          The system used a flight controller, GPS module, and power management circuitry to achieve waypoint-based
-          navigation similar to drones.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          I started with a basic RC chassis and systematically replaced the control hardware with an ArduPilot-compatible board.
-          I added a GPS module, soldered in a power distribution module (APC), and configured the firmware for ground vehicle
-          dynamics. The project required wiring, soldering, and sensor calibration to integrate all components, followed by
-          tuning and testing ArduPilot’s navigation stack for stable waypoint following.
-        </p>
-
-        <!-- UNDER PROCESS: rover4 + rover5 (no clipping) -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
-            <img src="./images/rover/rover4.jpg" alt="Autonomous rover - image 4" class="max-h-full max-w-full object-contain rounded-xl" />
-          </div>
-          <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
-            <img src="./images/rover/rover5.jpg" alt="Autonomous rover - image 5" class="max-h-full max-w-full object-contain rounded-xl" />
-          </div>
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Installed and configured an ArduPilot flight controller on an RC car platform.</li>
-          <li>Researched and implemented power distribution system for controllers and motors.</li>
-          <li>Performed soldering, sensor calibration, and firmware setup for waypoint navigation.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Embedded Systems &amp; Control: ArduPilot setup, ground vehicle tuning, waypoint navigation</li>
-          <li>Electronics &amp; Wiring: Power distribution design, soldering, GPS/IMU integration</li>
-          <li>Systems Integration: Chassis modification, module packaging, calibration workflow</li>
-          <li>Hands-On Engineering: Prototyping, debugging, end-to-end system assembly</li>
-        </ul>
-      </article>
-
-      <!-- UAV -->
-      <article id="uav" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Autonomous Hexacopter — UAV Design and Testing</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- Smaller hero: uav1 -->
-        <div class="mt-4 flex justify-center">
-          <img src="./images/uav/uav1.jpg" alt="Hexacopter overview"
-              class="rounded-xl w-full h-auto max-w-3xl object-contain" />
-        </div>
-
-        <p class="mt-4 text-slate-700">2023</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A school project that I expanded into a fully functional autonomous hexacopter. The drone ran ArduPilot firmware with
-          GPS-based navigation, offering flight modes like position hold, stabilization, and waypoint following.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          I designed a hexacopter frame in CAD and laser-cut it from wood and plastic. The first version was too weak and failed during early
-          flight tests, so I revised the design and rebuilt the frame to handle flight stresses more reliably. I reused many of the electronics
-          from my earlier autonomous rover, including the ArduPilot controller, GPS, and power modules, which let me focus on the mechanical
-          design and flight setup. Building and iterating on this project gave me hands-on exposure to UAV assembly, structural design tradeoffs,
-          and tuning autonomous flight systems.
-        </p>
-
-        <!-- Under Process: uav2 + uav3 -->
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <img src="./images/uav/uav2.jpg" alt="Hexacopter build detail"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-          <img src="./images/uav/uav3.jpg" alt="Hexacopter testing"
-              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Designed and laser-cut a custom hexacopter frame, revised after crash testing for greater strength.</li>
-          <li>Repurposed electronics from a previous rover project, including ArduPilot flight controller and GPS.</li>
-          <li>Configured flight firmware for position hold, stabilization, and waypoint navigation.</li>
-          <li>Calibrated GPS/IMU sensors and tuned flight performance.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>CAD design, laser cutting, iterative prototyping</li>
-          <li>UAV assembly, flight testing, and tuning</li>
-          <li>ArduPilot configuration and sensor calibration</li>
-          <li>Practical experience with failure, redesign, and testing</li>
-        </ul>
-
-        <!-- Smaller final image: uav4 -->
-        <div class="mt-6 flex justify-center">
-          <img src="./images/uav/uav4.jpg" alt="Hexacopter final build"
-              class="rounded-xl w-full h-auto max-w-3xl object-contain" />
-        </div>
-      </article>
-
-      <!-- GTI -->
-      <article id="gti" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement (In Progress)</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- Wide hero image at the start (uncropped) -->
-        <img src="./images/gti/gti2.jpg" alt="GTI rear strut brace - hero" class="mt-4 rounded-xl w-full h-auto object-contain" />
-
-        <p class="mt-4 text-slate-700">2025</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          Custom upper rear strut brace for a VW MK6 GTI, designed to tie the rear pillars behind the seats
-          for added stiffness and improved handling.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          Measured rear geometry, validated fit with a laser-cut wooden prototype, and fabricated the final
-          brace from metal using waterjet cutting. Pending installation and testing.
-        </p>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>CAD design for chassis reinforcement.</li>
-          <li>Prototype validation with laser cutting.</li>
-          <li>Final fabrication with waterjet cutting.</li>
-        </ul>
-
-        <!-- Secondary smaller image at the end -->
-        <div class="mt-6 flex justify-center">
-          <img src="./images/gti/gti3.JPG" alt="GTI rear strut brace - fabrication" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
-        </div>
-      </article>
-
-      <!-- Sleep -->
-      <article id="sleep" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Sleep Breath Tracker — Arduino-Based Airflow Monitoring</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- Hero image at the top -->
-        <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker - device overview" class="mt-4 rounded-xl w-full h-auto object-contain" />
-
-        <p class="mt-4 text-slate-700">2022</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A custom device designed to monitor and log breathing airflow during sleep, built for a family member
-          with sleep-related disorders. The system used a pressure sensor and microcontroller to record airflow
-          patterns overnight for later analysis.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          I started with a breadboard prototype using an Arduino and a pressure sensor to capture airflow data
-          through a nasal cannula. Once the basic system was working, I implemented filtering and logging so the
-          data could be stored and reviewed. To make it more practical, I transitioned from the breadboard to a
-          custom PCB designed in Autodesk Eagle, creating a compact, single-piece device that could be used
-          outside of a lab setting.
-        </p>
-
-        <!-- Image under Process -->
-        <div class="mt-4 flex justify-center">
-          <img src="./images/sleep/sleep2.jpg" alt="Sleep breath tracker - PCB" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Prototyped a sleep airflow monitoring system with Arduino and a pressure sensor.</li>
-          <li>Implemented basic filtering and data logging to capture overnight breathing data.</li>
-          <li>Designed a custom PCB in Autodesk Eagle to replace the breadboard prototype.</li>
-          <li>Assembled and tested the final PCB-based system as a portable, usable tool.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills & Tools</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Arduino programming, sensor integration, signal filtering, data logging</li>
-          <li>Electronics prototyping (breadboarding, wiring, testing)</li>
-          <li>PCB design in Autodesk Eagle, PCB assembly and validation</li>
-        </ul>
-      </article>
-
-      <!-- Skateboards -->
-      <article id="esk8" class="detail rounded-2xl border p-6 bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-2xl font-semibold">Electric Skateboards – First “Real” Engineering Projects</h3>
-          <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
-        </div>
-
-        <!-- Top images stacked vertically -->
-        <div class="mt-4 space-y-4">
-          <img src="./images/esk8/esk82.jpg" alt="Electric skateboard project - image 2" class="rounded-xl w-full h-auto object-contain" />
-          <img src="./images/esk8/esk83.jpg" alt="Electric skateboard project - image 3" class="rounded-xl w-full h-auto object-contain" />
-        </div>
-
-        <p class="mt-4 text-slate-700">2017 - 2019</p>
-
-        <h4 class="mt-4 font-medium">What It Is</h4>
-        <p class="mt-2 text-slate-700">
-          A set of DIY electric skateboards that became my first real engineering projects and sparked my
-          interest in electric vehicles.
-        </p>
-
-        <h4 class="mt-4 font-medium">Process</h4>
-        <p class="mt-2 text-slate-700">
-          I started by building a deck with my neighbor, ordering hub motors, a controller, and batteries
-          from eBay, and rigging everything together in a Tupperware enclosure to make a working electric
-          skateboard. After that first success, I wanted to push further and built a belt-drive board using
-          a store-bought deck and enclosure. This time I integrated a VESC motor controller — the same
-          architecture I would later use in larger EV projects like my motorcycle conversion. These projects
-          taught me the basics of batteries, controllers, wiring, and mechanical packaging, while also giving
-          me the excitement of riding something I built myself.
-        </p>
-
-        <!-- Image above Technical Work -->
-        <div class="mt-4 flex justify-center">
-          <img src="./images/esk8/esk84.jpg" alt="Electric skateboard project - image 4" class="rounded-xl max-w-2xl w-full h-auto object-contain" />
-        </div>
-
-        <h4 class="mt-4 font-medium">Technical Work</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Built a hub-motor electric skateboard using off-the-shelf motors, batteries, and controllers.</li>
-          <li>Fabricated an enclosure from simple materials to house electronics and wiring.</li>
-          <li>Designed and assembled a belt-drive electric skateboard with a VESC-based control system.</li>
-          <li>Learned fundamentals of EV architecture, including battery pack assembly, motor control, and drivetrain tradeoffs.</li>
-        </ul>
-
-        <h4 class="mt-4 font-medium">Skills & Tools</h4>
-        <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
-          <li>Electronics assembly and wiring, battery and controller integration</li>
-          <li>Hands-on fabrication and packaging of mechanical/electrical systems</li>
-          <li>Early experience with VESC motor controllers (applied later in motorcycle project)</li>
-          <li>Self-directed prototyping and iterative design</li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="max-w-5xl mx-auto px-4 py-10">
-      <h2 class="text-2xl sm:text-3xl font-semibold">About</h2>
-      <div class="mt-4 grid gap-6 sm:grid-cols-3 items-start">
-        <div class="sm:col-span-2 space-y-3">
-          <p class="text-slate-700 max-w-3xl">
-            I grew up in the Bay Area and graduated from Mountain View High School, where I was always building things. I first got into woodworking and hands-on projects before diving into robotics, which I pursued throughout high school. At UC Berkeley, I’ve carried that maker mindset into larger projects in EVs, robotics, and embedded systems — constantly pushing ideas into reality.
-          </p>
-          <p class="text-slate-700 max-w-3xl">
-            Outside of engineering, I’ve been deeply involved in music and enjoy being outdoors — driving, working out, and cooking, especially baking and BBQ. Moving to the East Bay has been a chance to bring those passions together with my academic and project work.
-          </p>
-        </div>
-        <figure class="sm:col-span-1">
-          <img src="./images/about/about1.jpg" alt="Sid in the shop" class="w-full h-auto mx-auto rounded-2xl border shadow-sm object-cover" />
-        </figure>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="max-w-5xl mx-auto px-4 pb-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold">Contact</h2>
-      <div class="mt-4 grid sm:grid-cols-2 gap-4">
-        <div class="rounded-2xl border p-5 bg-white shadow-sm">
-          <div class="text-sm text-slate-500">Email</div>
-          <a class="text-lg font-medium text-calBlue hover:underline" href="mailto:sidm@berkeley.edu">sidm@berkeley.edu</a>
-        </div>
-        <div class="rounded-2xl border p-5 bg-white shadow-sm">
-          <div class="text-sm text-slate-500">LinkedIn</div>
-          <a class="text-lg font-medium text-calBlue hover:underline" href="https://www.linkedin.com/in/sid-mandava-102828279/" target="_blank" rel="noreferrer">linkedin.com/in/sid-mandava-102828279/</a>
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol5.jpg" alt="Festival of Lights - image 5"
+            class="max-h-full max-w-full object-contain" />
         </div>
       </div>
-      <p class="mt-6 text-slate-500 text-sm">Los Altos, CA · Berkeley, CA · (650) 669-7623</p>
-    </section>
 
-    <!-- Footer -->
-    <footer class="border-t bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-6 text-sm flex items-center justify-between">
-        <span>© <span id="year"></span> Sid Mandava</span>
-        <a class="hover:underline" href="#home">Back to top ↑</a>
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Co-developed a Raspberry Pi–based programmable control system for coordinated float animations.</li>
+        <li>Designed and implemented battery-powered systems to replace gas generators across multiple floats.</li>
+        <li>Helped scale adoption of these systems, which are still being implemented on floats today.</li>
+        <li>Contributed mechanical redesigns such as a stepper motor–driven carousel system.</li>
+        <li>Maintained and repaired legacy float chassis, including old car frames and drivetrains.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
+      <ul class="mt-2 list-none p-0 space-y-1 text-slate-700">
+        <li><span class="font-medium">Embedded systems:</span> Raspberry Pi, relays, servos, motor controllers</li>
+        <li><span class="font-medium">Power systems:</span> battery integration, generator replacement, efficiency
+          improvements</li>
+        <li><span class="font-medium">Mechanical systems:</span> stepper motors, pulleys, 3D printing, general
+          fabrication</li>
+        <li><span class="font-medium">Automotive basics:</span> experience working on old car chassis and float
+          structures</li>
+        <li><span class="font-medium">Teamwork &amp; Leadership:</span> worked with peers to grow the program, supported
+          new contributors, and documented systems for reuse</li>
+      </ul>
+
+      <!-- END: fol6 + fol7 centered, equal height, no clipping -->
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol6.jpg" alt="Festival of Lights - image 6"
+            class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl bg-slate-100">
+          <img src="./images/fol/fol7.jpg" alt="Festival of Lights - image 7"
+            class="max-h-full max-w-full object-contain" />
+        </div>
       </div>
-    </footer>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+      <div class="mt-6">
+        <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
+      </div>
+    </article>
+
+    <!-- FSAE -->
+    <article id="fsae" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Berkeley Formula Racing — Brakes & Driver Interface Engineer</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- TOP: fsae1 + fsae2 cropped to fit -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <img src="./images/fsae/fsae1.jpg" alt="FSAE image 1"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+        <img src="./images/fsae/fsae2.jpg" alt="FSAE image 2"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+      </div>
+
+      <p class="mt-4 text-slate-700">2023 - 2024</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        UC Berkeley’s Formula SAE team designs and builds a formula-style racecar each year to compete in international
+        student engineering competitions.
+        I contributed as part of the Brakes and Driver Interface subteam.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        My work included supporting MATLAB simulations for brake forces and vehicle dynamics, assisting with a
+        carbon-fiber seat mold, and designing chassis
+        mounting tabs for seat integration and related components. Although my direct involvement was limited, the
+        experience gave me a clearer understanding
+        of how the different technical subsystems come together in a racecar project. It also highlighted how leadership
+        and team culture impact engineering outcomes,
+        motivating me to prioritize better practices and team structures in my later projects.
+      </p>
+
+      <!-- Single image under Process (cropped to fit) -->
+      <div class="mt-4">
+        <img src="./images/fsae/fsae3.jpg" alt="FSAE image 3"
+          class="w-full h-64 sm:h-80 md:h-[28rem] object-cover rounded-xl" />
+      </div>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Contributed to MATLAB-based brake force and vehicle dynamics simulations.</li>
+        <li>Assisted in mold construction for a carbon-fiber driver seat.</li>
+        <li>Designed chassis mounting tabs for seat and related component integration.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
+      <ul class="mt-2 list-none space-y-1 text-slate-700">
+        <li><span class="font-medium">MATLAB scripting:</span> engineering simulations</li>
+        <li><span class="font-medium">CAD design:</span> chassis integration components</li>
+        <li><span class="font-medium">Composite fabrication:</span> carbon-fiber layup</li>
+        <li><span class="font-medium">Project experience:</span> exposure to large-scale engineering projects and team
+          culture</li>
+      </ul>
+
+      <!-- Bottom: one long image (uncropped, no scroll) -->
+      <div class="mt-6">
+        <img src="./images/fsae/fsae4.jpg" alt="FSAE long image" class="w-full h-auto rounded-xl" />
+      </div>
+
+      <div class="mt-6">
+        <a href="#projects" class="text-sm text-calBlue hover:underline">← Back to projects</a>
+      </div>
+    </article>
+
+    <!-- Exoskeleton -->
+    <article id="exo" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Lower Limb Exoskeleton Research – San José State University</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- Main hero image (smaller) -->
+      <div class="mt-6 flex justify-center">
+        <img src="./images/exo/exo3.jpg" alt="Exoskeleton research (detail)"
+          class="rounded-xl max-w-sm w-full h-auto" />
+      </div>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A faculty-led project at San Jose State University to explore fully 3D-printed lower-limb exoskeleton designs
+        for assistive robotics.
+        I joined the research team as a high school student, supporting both mechanical and embedded tasks.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        Wanting to learn more about engineering research, I reached out to professors and was given the chance to spend
+        a summer working with a team of undergraduate and graduate students.
+        Most of my role was supporting ongoing work: I helped evaluate 3D printing methods and materials, ran test
+        prints, and contributed to design efforts on the hip subassembly.
+        On the electronics side, I programmed an ESP32 to communicate with motors and sensors using I²C and CAN bus,
+        gaining early exposure to embedded systems.
+        The project was still in development when I left, but the experience gave me valuable hands-on learning and an
+        introduction to academic robotics research.
+      </p>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Assisted CAD design and prototyping for the hip subassembly.</li>
+        <li>Researched and tested 3D printing methods and materials.</li>
+        <li>Programmed ESP32 modules for motor/sensor communication via I²C and CAN bus.</li>
+        <li>Collaborated with a team of undergrad and graduate researchers in a lab setting.</li>
+      </ul>
+
+      <!-- Smaller supporting image -->
+      <div class="mt-6 flex justify-center">
+        <img src="./images/exo/exo2.jpg" alt="Exoskeleton research (detail)"
+          class="rounded-xl max-w-sm w-full h-auto" />
+      </div>
+
+      <h4 class="mt-6 font-medium">Skills &amp; Tools</h4>
+      <ul class="mt-2 list-none space-y-1 text-slate-700">
+        <li><span class="font-medium">CAD:</span> SolidWorks, 3D printing, prototyping</li>
+        <li><span class="font-medium">Embedded:</span> ESP32 programming, I²C and CAN bus communication</li>
+        <li><span class="font-medium">Research experience:</span> interdisciplinary robotics research and lab teamwork
+        </li>
+      </ul>
+    </article>
+
+    <!-- Rover -->
+    <article id="rover" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Autonomous Rover – Waypoint Navigation With Ardupilot</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- TOP: rover2 + rover3 cropped -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <img src="./images/rover/rover2.jpg" alt="Autonomous rover - image 2"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+        <img src="./images/rover/rover3.jpg" alt="Autonomous rover - image 3"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+      </div>
+
+      <p class="mt-4 text-slate-700">2021</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A GPS-guided autonomous rover built by converting a standard RC car into a ground vehicle running ArduPilot.
+        The system used a flight controller, GPS module, and power management circuitry to achieve waypoint-based
+        navigation similar to drones.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        I started with a basic RC chassis and systematically replaced the control hardware with an ArduPilot-compatible
+        board.
+        I added a GPS module, soldered in a power distribution module (APC), and configured the firmware for ground
+        vehicle
+        dynamics. The project required wiring, soldering, and sensor calibration to integrate all components, followed
+        by
+        tuning and testing ArduPilot’s navigation stack for stable waypoint following.
+      </p>
+
+      <!-- UNDER PROCESS: rover4 + rover5 (no clipping) -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
+          <img src="./images/rover/rover4.jpg" alt="Autonomous rover - image 4"
+            class="max-h-full max-w-full object-contain rounded-xl" />
+        </div>
+        <div class="flex items-center justify-center h-64 sm:h-80 md:h-96 rounded-xl">
+          <img src="./images/rover/rover5.jpg" alt="Autonomous rover - image 5"
+            class="max-h-full max-w-full object-contain rounded-xl" />
+        </div>
+      </div>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Installed and configured an ArduPilot flight controller on an RC car platform.</li>
+        <li>Researched and implemented power distribution system for controllers and motors.</li>
+        <li>Performed soldering, sensor calibration, and firmware setup for waypoint navigation.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Embedded Systems &amp; Control: ArduPilot setup, ground vehicle tuning, waypoint navigation</li>
+        <li>Electronics &amp; Wiring: Power distribution design, soldering, GPS/IMU integration</li>
+        <li>Systems Integration: Chassis modification, module packaging, calibration workflow</li>
+        <li>Hands-On Engineering: Prototyping, debugging, end-to-end system assembly</li>
+      </ul>
+    </article>
+
+    <!-- UAV -->
+    <article id="uav" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Autonomous Hexacopter — UAV Design and Testing</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- Smaller hero: uav1 -->
+      <div class="mt-4 flex justify-center">
+        <img src="./images/uav/uav1.jpg" alt="Hexacopter overview"
+          class="rounded-xl w-full h-auto max-w-3xl object-contain" />
+      </div>
+
+      <p class="mt-4 text-slate-700">2023</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A school project that I expanded into a fully functional autonomous hexacopter. The drone ran ArduPilot firmware
+        with
+        GPS-based navigation, offering flight modes like position hold, stabilization, and waypoint following.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        I designed a hexacopter frame in CAD and laser-cut it from wood and plastic. The first version was too weak and
+        failed during early
+        flight tests, so I revised the design and rebuilt the frame to handle flight stresses more reliably. I reused
+        many of the electronics
+        from my earlier autonomous rover, including the ArduPilot controller, GPS, and power modules, which let me focus
+        on the mechanical
+        design and flight setup. Building and iterating on this project gave me hands-on exposure to UAV assembly,
+        structural design tradeoffs,
+        and tuning autonomous flight systems.
+      </p>
+
+      <!-- Under Process: uav2 + uav3 -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <img src="./images/uav/uav2.jpg" alt="Hexacopter build detail"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+        <img src="./images/uav/uav3.jpg" alt="Hexacopter testing"
+          class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl" />
+      </div>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Designed and laser-cut a custom hexacopter frame, revised after crash testing for greater strength.</li>
+        <li>Repurposed electronics from a previous rover project, including ArduPilot flight controller and GPS.</li>
+        <li>Configured flight firmware for position hold, stabilization, and waypoint navigation.</li>
+        <li>Calibrated GPS/IMU sensors and tuned flight performance.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills &amp; Tools</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>CAD design, laser cutting, iterative prototyping</li>
+        <li>UAV assembly, flight testing, and tuning</li>
+        <li>ArduPilot configuration and sensor calibration</li>
+        <li>Practical experience with failure, redesign, and testing</li>
+      </ul>
+
+      <!-- Smaller final image: uav4 -->
+      <div class="mt-6 flex justify-center">
+        <img src="./images/uav/uav4.jpg" alt="Hexacopter final build"
+          class="rounded-xl w-full h-auto max-w-3xl object-contain" />
+      </div>
+    </article>
+
+    <!-- GTI -->
+    <article id="gti" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">MK6 GTI Rear Strut Brace — Chassis Reinforcement (In Progress)</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- Wide hero image at the start (uncropped) -->
+      <img src="./images/gti/gti2.jpg" alt="GTI rear strut brace - hero"
+        class="mt-4 rounded-xl w-full h-auto object-contain" />
+
+      <p class="mt-4 text-slate-700">2025</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        Custom upper rear strut brace for a VW MK6 GTI, designed to tie the rear pillars behind the seats
+        for added stiffness and improved handling.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        Measured rear geometry, validated fit with a laser-cut wooden prototype, and fabricated the final
+        brace from metal using waterjet cutting. Pending installation and testing.
+      </p>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>CAD design for chassis reinforcement.</li>
+        <li>Prototype validation with laser cutting.</li>
+        <li>Final fabrication with waterjet cutting.</li>
+      </ul>
+
+      <!-- Secondary smaller image at the end -->
+      <div class="mt-6 flex justify-center">
+        <img src="./images/gti/gti3.JPG" alt="GTI rear strut brace - fabrication"
+          class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+      </div>
+    </article>
+
+    <!-- Sleep -->
+    <article id="sleep" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Sleep Breath Tracker — Arduino-Based Airflow Monitoring</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- Hero image at the top -->
+      <img src="./images/sleep/sleep1.jpg" alt="Sleep breath tracker - device overview"
+        class="mt-4 rounded-xl w-full h-auto object-contain" />
+
+      <p class="mt-4 text-slate-700">2022</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A custom device designed to monitor and log breathing airflow during sleep, built for a family member
+        with sleep-related disorders. The system used a pressure sensor and microcontroller to record airflow
+        patterns overnight for later analysis.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        I started with a breadboard prototype using an Arduino and a pressure sensor to capture airflow data
+        through a nasal cannula. Once the basic system was working, I implemented filtering and logging so the
+        data could be stored and reviewed. To make it more practical, I transitioned from the breadboard to a
+        custom PCB designed in Autodesk Eagle, creating a compact, single-piece device that could be used
+        outside of a lab setting.
+      </p>
+
+      <!-- Image under Process -->
+      <div class="mt-4 flex justify-center">
+        <img src="./images/sleep/sleep2.jpg" alt="Sleep breath tracker - PCB"
+          class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+      </div>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Prototyped a sleep airflow monitoring system with Arduino and a pressure sensor.</li>
+        <li>Implemented basic filtering and data logging to capture overnight breathing data.</li>
+        <li>Designed a custom PCB in Autodesk Eagle to replace the breadboard prototype.</li>
+        <li>Assembled and tested the final PCB-based system as a portable, usable tool.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills & Tools</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Arduino programming, sensor integration, signal filtering, data logging</li>
+        <li>Electronics prototyping (breadboarding, wiring, testing)</li>
+        <li>PCB design in Autodesk Eagle, PCB assembly and validation</li>
+      </ul>
+    </article>
+
+    <!-- Skateboards -->
+    <article id="esk8" class="detail rounded-2xl border p-6 bg-white shadow-sm">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Electric Skateboards – First “Real” Engineering Projects</h3>
+        <a href="#projects" class="text-sm underline decoration-dotted">Close ✕</a>
+      </div>
+
+      <!-- Top images stacked vertically -->
+      <div class="mt-4 space-y-4">
+        <img src="./images/esk8/esk82.jpg" alt="Electric skateboard project - image 2"
+          class="rounded-xl w-full h-auto object-contain" />
+        <img src="./images/esk8/esk83.jpg" alt="Electric skateboard project - image 3"
+          class="rounded-xl w-full h-auto object-contain" />
+      </div>
+
+      <p class="mt-4 text-slate-700">2017 - 2019</p>
+
+      <h4 class="mt-4 font-medium">What It Is</h4>
+      <p class="mt-2 text-slate-700">
+        A set of DIY electric skateboards that became my first real engineering projects and sparked my
+        interest in electric vehicles.
+      </p>
+
+      <h4 class="mt-4 font-medium">Process</h4>
+      <p class="mt-2 text-slate-700">
+        I started by building a deck with my neighbor, ordering hub motors, a controller, and batteries
+        from eBay, and rigging everything together in a Tupperware enclosure to make a working electric
+        skateboard. After that first success, I wanted to push further and built a belt-drive board using
+        a store-bought deck and enclosure. This time I integrated a VESC motor controller — the same
+        architecture I would later use in larger EV projects like my motorcycle conversion. These projects
+        taught me the basics of batteries, controllers, wiring, and mechanical packaging, while also giving
+        me the excitement of riding something I built myself.
+      </p>
+
+      <!-- Image above Technical Work -->
+      <div class="mt-4 flex justify-center">
+        <img src="./images/esk8/esk84.jpg" alt="Electric skateboard project - image 4"
+          class="rounded-xl max-w-2xl w-full h-auto object-contain" />
+      </div>
+
+      <h4 class="mt-4 font-medium">Technical Work</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Built a hub-motor electric skateboard using off-the-shelf motors, batteries, and controllers.</li>
+        <li>Fabricated an enclosure from simple materials to house electronics and wiring.</li>
+        <li>Designed and assembled a belt-drive electric skateboard with a VESC-based control system.</li>
+        <li>Learned fundamentals of EV architecture, including battery pack assembly, motor control, and drivetrain
+          tradeoffs.</li>
+      </ul>
+
+      <h4 class="mt-4 font-medium">Skills & Tools</h4>
+      <ul class="mt-2 list-disc list-inside space-y-1 text-slate-700">
+        <li>Electronics assembly and wiring, battery and controller integration</li>
+        <li>Hands-on fabrication and packaging of mechanical/electrical systems</li>
+        <li>Early experience with VESC motor controllers (applied later in motorcycle project)</li>
+        <li>Self-directed prototyping and iterative design</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl sm:text-3xl font-semibold">About</h2>
+    <div class="mt-4 grid gap-6 sm:grid-cols-3 items-start">
+      <div class="sm:col-span-2 space-y-3">
+        <p class="text-slate-700 max-w-3xl">
+          I grew up in the Bay Area and graduated from Mountain View High School, where I was always building things. I
+          first got into woodworking and hands-on projects before diving into robotics, which I pursued throughout high
+          school. At UC Berkeley, I’ve carried that maker mindset into larger projects in EVs, robotics, and embedded
+          systems — constantly pushing ideas into reality.
+        </p>
+        <p class="text-slate-700 max-w-3xl">
+          Outside of engineering, I’ve been deeply involved in music and enjoy being outdoors — driving, working out,
+          and cooking, especially baking and BBQ. Moving to the East Bay has been a chance to bring those passions
+          together with my academic and project work.
+        </p>
+      </div>
+      <figure class="sm:col-span-1">
+        <img src="./images/about/about1.jpg" alt="Sid in the shop"
+          class="w-full h-auto mx-auto rounded-2xl border shadow-sm object-cover" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto px-4 pb-16">
+    <h2 class="text-2xl sm:text-3xl font-semibold">Contact</h2>
+    <div class="mt-4 grid sm:grid-cols-2 gap-4">
+      <div class="rounded-2xl border p-5 bg-white shadow-sm">
+        <div class="text-sm text-slate-500">Email</div>
+        <a class="text-lg font-medium text-calBlue hover:underline"
+          href="mailto:sidm@berkeley.edu">sidm@berkeley.edu</a>
+      </div>
+      <div class="rounded-2xl border p-5 bg-white shadow-sm">
+        <div class="text-sm text-slate-500">LinkedIn</div>
+        <a class="text-lg font-medium text-calBlue hover:underline"
+          href="https://www.linkedin.com/in/sid-mandava-102828279/" target="_blank"
+          rel="noreferrer">linkedin.com/in/sid-mandava-102828279/</a>
+      </div>
+    </div>
+    <p class="mt-6 text-slate-500 text-sm">Los Altos, CA · Berkeley, CA · (650) 669-7623</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-sm flex items-center justify-between">
+      <span>© <span id="year"></span> Sid Mandava</span>
+      <a class="hover:underline" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
